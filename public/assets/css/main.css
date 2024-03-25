@@ -1,0 +1,320 @@
+/* main */
+
+section main {
+  flex-grow: 1;
+  color: var(--white);
+  padding: 3rem 3rem 0 5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  overflow: hidden;
+}
+
+section main .statistic .Optcs {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem 1rem;
+  justify-content: space-between;
+  background: #335ecc;
+  box-shadow: 0.01rem 0.1rem 0.2rem rgb(3, 38, 120);
+}
+
+section main .statistic .Optcs button {
+  flex-grow: 1;
+  border: 0;
+  border-radius: 1.5rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  background: rgb(62, 120, 243);
+  box-shadow: 0.01rem 0.01rem 0.5rem rgba(31, 31, 32, 0.629);
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+section main .statistic .Optcs button:hover {
+  background: rgb(75, 131, 251);
+}
+section main .statistic .Optcs button i {
+  font-size: 1.4rem;
+}
+
+section main .statistic .Optcs span:not(span.porcent) {
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+section main .statistic .Optcs span.flexed {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 0.5rem 2rem;
+  border-bottom: solid 0.2rem #648cf2;
+  text-transform: uppercase;
+}
+
+section main .statistic .Optcs span.flexed img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+section main .statistic .Optcs span.flexed i.color_blacked {
+  color: rgba(53, 53, 53, 0.926);
+}
+
+section main .statistic .Optcs span.borderd {
+  padding: 1rem 2rem;
+  border-bottom: solid 0.2rem #648cf2;
+}
+
+section main .statistic .Optcs span.porcent {
+  border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  background: rgba(72, 146, 225, 0.592);
+}
+
+section main .statistic .btn_letter {
+  margin-top: 0.5rem;
+  padding: 2.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background: #042b8f;
+}
+
+section main .statistic .btn_letter p {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #77aafb;
+}
+
+section main .statistic .btn_letter button {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  border: 0;
+  background: rgb(248, 209, 35);
+  font-weight: bold;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: background 0.3s linear;
+}
+
+section main .statistic .btn_letter button:hover {
+  background: rgb(223, 187, 25);
+}
+
+/* grific part */
+
+section main .statistic .grafic_container .tittle_container {
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  color: #77aafb;
+}
+
+section main .statistic .grafic_container .tittle_container .info {
+  flex-grow: 1;
+  font-size: 1.7rem;
+}
+section main .statistic .grafic_container .tittle_container .info p:last-child {
+  font-size: 1.5rem;
+}
+
+section main .statistic .grafic_container .tittle_container .info span {
+  color: white;
+}
+
+section main .statistic .grafic_container .tittle_container .info p:last-child {
+  margin-top: 0.5rem;
+}
+
+section main .statistic .grafic_container .tittle_container .list_opt {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+section main .statistic .grafic_container .tittle_container .list_opt ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+section main .statistic .grafic_container .tittle_container .list_opt ul li {
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+section
+  main
+  .statistic
+  .grafic_container
+  .tittle_container
+  .list_opt
+  ul
+  li:hover {
+  background: #77aafbd6;
+  color: white;
+}
+
+section
+  main
+  .statistic
+  .grafic_container
+  .tittle_container
+  .list_opt
+  ul
+  li.active {
+  background: #77aafbd6;
+  color: white;
+}
+
+section main .statistic .grafic_container .grafic {
+  height: 20rem;
+}
+
+section main .statistic .grafic_container .grafic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* parte das infos */
+
+section main .letters {
+  position: relative;
+  color: #77aafb;
+  position: relative;
+}
+
+section main .letters .first_info h3 {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+section main .letters .first_info h3 img {
+  height: 2rem;
+  width: 2rem;
+  object-fit: cover;
+  object-position: center;
+}
+
+section main .letters .first_info p {
+  margin-top: 1rem;
+  width: 80%;
+  font-size: 1.5rem;
+  color: #a8c0fc;
+  line-height: 2rem;
+}
+
+section main .letters .second_info {
+  position: absolute;
+  bottom: 17rem;
+  left: 4em;
+}
+section main .letters .second_info h3 {
+  color: #a8c6f6;
+  font-size: 2.5rem;
+}
+
+section main .letters .second_info p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #a8c0fc;
+}
+
+section main .letters .second_info a {
+  display: block;
+  font-size: 1.5rem;
+  color: #a8c0fc;
+}
+
+section main .letters svg {
+  position: absolute;
+  bottom: 0;
+  right: -4rem;
+  height: 20rem;
+  width: 20rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 1170px) {
+  section main {
+    display: grid;
+    align-items: start;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  section main .letters .second_info {
+    position: relative;
+    margin-top: 2rem;
+    bottom: 0rem;
+    left: 0;
+  }
+}
+
+@media (max-width: 985px) {
+  section main .statistic .Optcs {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 821px) {
+  section main {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 523px) {
+  section main .statistic .grafic_container .tittle_container .info {
+    text-align: center;
+  }
+
+  section main .statistic .grafic_container .tittle_container .list_opt {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 690px) {
+  section main .letters svg {
+    display: none;
+  }
+}
+
+@media (max-width: 410px) {
+  section main .statistic .btn_letter {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 327px) {
+  section main .statistic .Optcs {
+    flex-direction: column;
+  }
+}

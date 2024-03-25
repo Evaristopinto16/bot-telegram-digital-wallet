@@ -1,0 +1,15 @@
+/* Secion */
+section {
+  transition: all 0.3s linear;
+  display: flex;
+  flex-direction: column;
+  margin-left: 270px;
+  width: calc(100% - 270px);
+  min-height: 100vh;
+  background: url("../imgs/orca_fundo.png") no-repeat center;
+  background-size: cover;
+  font-size: 1.6rem;
+  color: white;
+  overflow: hidden;
+
+}

@@ -1,0 +1,73 @@
+/* footer */
+
+section footer {
+  padding: 1rem;
+  color: #85a7ff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem 1rem;
+  justify-content: space-between;
+}
+
+section footer ul {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+section footer ul li {
+  cursor: pointer;
+  /* flex-grow: 1; */
+  list-style: none;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+section footer ul li a {
+  color: #85a7ff;
+  text-decoration: none;
+}
+
+section footer ul li a:hover {
+  color: white;
+}
+
+/* redes */
+
+section footer .socias_midia {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+}
+
+section footer .socias_midia a {
+  flex-grow: 1;
+  text-decoration: none;
+}
+
+section footer .socias_midia a:hover i {
+  color: white;
+}
+
+section footer .socias_midia i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #85a7ff;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 877px) {
+  section footer {
+    border-top: solid 0.1rem #589dff;
+    margin-top: 2rem;
+  }
+}
